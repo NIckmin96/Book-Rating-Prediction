@@ -36,7 +36,7 @@ class FactorizationMachineModel:
 
     def train(self):
       # model: type, optimizer: torch.optim, train_dataloader: DataLoader, criterion: torch.nn, device: str, log_interval: int=100
-        wandb.watch(self.epochs)
+        wandb.watch(self.model)
         for epoch in range(self.epochs):
             self.model.train()
             total_loss = 0

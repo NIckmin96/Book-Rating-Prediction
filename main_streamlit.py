@@ -1,6 +1,7 @@
 import time
 import argparse
 import pandas as pd
+import os
 
 from src import seed_everything
 
@@ -17,7 +18,7 @@ from src import CNN_FM
 from src import DeepCoNN
 from src import donggun
 from src import CatBoost
-# import wandb
+import wandb
 
 import streamlit as st
 from PIL import Image
@@ -30,7 +31,7 @@ def main(args):
 
     ######################## DATA LOAD
     print(f'--------------- {args.MODEL} Load Data ---------------')
-    # wandb.init(project = args.MODEL, name = time.strftime('%m/%d %H:%M:%S',now), config={"epochs": args.EPOCHS, "batch_size": 1024})
+    wandb.init(project = args.MODEL, name = time.strftime('%m/%d %H:%M:%S',now), config={"epochs": args.EPOCHS, "batch_size": 1024})
     if args.MODEL in ('FM', 'FFM'):
         data = context_data_load(args)
     elif args.MODEL in ('NCF', 'WDN', 'DCN'):
@@ -99,7 +100,7 @@ def main(args):
 
     ######################## TRAIN
     print(f'--------------- {args.MODEL} TRAINING ---------------')
-    # wandb.init(project="f'{model.name}'")
+    wandb.init(project="f'{model.name}'")
     model.train()
 
     ######################## INFERENCE
@@ -142,7 +143,7 @@ if __name__ == "__main__":
     arg = parser.add_argument
 
     ############### BASIC OPTION
-    arg('--DATA_PATH', type=str, default='data/preprocessed/', help='Data path를 설정할 수 있습니다.')
+    arg('--DATA_PATH', type=str, default='data/', help='Data path를 설정할 수 있습니다.')
     arg('--MODEL', type=str, choices=['FM', 'FFM', 'NCF', 'WDN', 'DCN', 'CNN_FM', 'DeepCoNN', 'donggun', 'CAT'],
                                 help='학습 및 예측할 모델을 선택할 수 있습니다.')
     arg('--DATA_SHUFFLE', type=bool, default=True, help='데이터 셔플 여부를 조정할 수 있습니다.')
@@ -156,7 +157,7 @@ if __name__ == "__main__":
     arg('--WEIGHT_DECAY', type=float, default=1e-6, help='Adam optimizer에서 정규화에 사용하는 값을 조정할 수 있습니다.')
 
     ############### GPU
-    arg('--DEVICE', type=str, default='cuda', choices=['cuda', 'cpu'], help='학습에 사용할 Device를 조정할 수 있습니다.')
+    arg('--DEVICE', type=str, default='cpu', choices=['cuda', 'cpu'], help='학습에 사용할 Device를 조정할 수 있습니다.')
 
     ############### FM
     arg('--FM_EMBED_DIM', type=int, default=16, help='FM에서 embedding시킬 차원을 조정할 수 있습니다.')
@@ -194,4 +195,33 @@ if __name__ == "__main__":
     arg('--DEEPCONN_OUT_DIM', type=int, default=32, help='DEEP_CONN에서 1D conv의 출력 크기를 조정할 수 있습니다.')
 
     args = parser.parse_args()
-    main(args)
+    
+    add_selectbox = st.sidebar.selectbox(
+                        'Choose Model',
+                        ('CAT','FM','FFM','NCF','WDN','DCN','CNN_FM','DeepCoNN','donggun')
+    )
+    
+    args.MODEL = add_selectbox
+    time.sleep(2)
+    add_selectbox = st.sidebar.selectbox(
+                        'Choose Data Path',
+                        ('data/preprocessed/', 'data/raw/')
+    )
+    
+    args.DATA_PATH = add_selectbox
+    time.sleep(2)
+    
+    add_slider = st.sidebar.slider('Select the numbers of results',
+                                    min_value = 10, max_value = 100, value = 10)
+    # click 하면model실행
+    if st.button('Click here to Run Model') : 
+        st.write("Running...")
+        main(args)
+        
+        time.sleep(2)
+        
+        df = pd.read_csv('/Users/bokkimin/Desktop/workspace/부스트캠프/lvl1_pj_merge/submit/'+ os.listdir('/Users/bokkimin/Desktop/workspace/부스트캠프/lvl1_pj_merge/submit/')[-1])
+        
+        st.write('End of Inference!')
+        st.write(df.head(add_slider))
+    

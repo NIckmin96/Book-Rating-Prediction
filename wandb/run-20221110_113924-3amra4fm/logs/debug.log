@@ -1,0 +1,13 @@
+2022-11-10 11:39:24,126 INFO    ScriptRunner.scriptThread:79165 [wandb_setup.py:_flush():68] Configure stats pid to 79165
+2022-11-10 11:39:24,126 INFO    ScriptRunner.scriptThread:79165 [wandb_setup.py:_flush():68] Loading settings from /Users/bokkimin/.config/wandb/settings
+2022-11-10 11:39:24,126 INFO    ScriptRunner.scriptThread:79165 [wandb_setup.py:_flush():68] Loading settings from /Users/bokkimin/Desktop/workspace/부스트캠프/lvl1_pj_merge/wandb/settings
+2022-11-10 11:39:24,126 INFO    ScriptRunner.scriptThread:79165 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-11-10 11:39:24,126 INFO    ScriptRunner.scriptThread:79165 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'main_streamlit.py', 'program': '/Users/bokkimin/Desktop/workspace/부스트캠프/lvl1_pj_merge/main_streamlit.py'}
+2022-11-10 11:39:24,127 INFO    ScriptRunner.scriptThread:79165 [wandb_setup.py:_flush():68] Applying login settings: {'api_key': '***REDACTED***'}
+2022-11-10 11:39:24,127 INFO    ScriptRunner.scriptThread:79165 [wandb_init.py:_log_setup():476] Logging user logs to /Users/bokkimin/Desktop/workspace/부스트캠프/lvl1_pj_merge/wandb/run-20221110_113924-3amra4fm/logs/debug.log
+2022-11-10 11:39:24,127 INFO    ScriptRunner.scriptThread:79165 [wandb_init.py:_log_setup():477] Logging internal logs to /Users/bokkimin/Desktop/workspace/부스트캠프/lvl1_pj_merge/wandb/run-20221110_113924-3amra4fm/logs/debug-internal.log
+2022-11-10 11:39:24,127 INFO    ScriptRunner.scriptThread:79165 [wandb_init.py:init():516] calling init triggers
+2022-11-10 11:39:24,128 INFO    ScriptRunner.scriptThread:79165 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-11-10 11:39:24,128 INFO    ScriptRunner.scriptThread:79165 [wandb_init.py:init():564] wandb.init() called when a run is still active
+2022-11-10 11:41:02,407 WARNING MsgRouterThr:79165 [router.py:message_loop():77] message_loop has been closed

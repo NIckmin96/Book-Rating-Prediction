@@ -1,0 +1,12 @@
+--------------- None Train/Valid Split ---------------
+--------------- INIT None ---------------
+--------------- None TRAINING ---------------
+2022-11-10 11:39:24.131 Traceback (most recent call last):
+  File "/usr/local/anaconda3/envs/boostcamp/lib/python3.8/site-packages/streamlit/script_runner.py", line 379, in _run_script
+    exec(code, module.__dict__)
+  File "/Users/bokkimin/Desktop/workspace/부스트캠프/lvl1_pj_merge/main_streamlit.py", line 197, in <module>
+    main(args)
+  File "/Users/bokkimin/Desktop/workspace/부스트캠프/lvl1_pj_merge/main_streamlit.py", line 103, in main
+    model.train()
+UnboundLocalError: local variable 'model' referenced before assignment
+[34m  Stopping...

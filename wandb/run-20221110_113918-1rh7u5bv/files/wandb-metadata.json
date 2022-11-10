@@ -1,0 +1,42 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-11-10T02:39:19.130803",
+    "startedAt": "2022-11-10T02:39:18.097591",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/bokkimin/Desktop/workspace/\u1107\u116e\u1109\u1173\u1110\u1173\u110f\u1162\u11b7\u1111\u1173/lvl1_pj_merge/main_streamlit.py",
+    "codePath": "main_streamlit.py",
+    "git": {
+        "remote": null,
+        "commit": "8cb2d2fb55095ddd13a9593c9e76752b0f872e51"
+    },
+    "email": "sdsf1225@gmail.com",
+    "root": "/Users/bokkimin/Desktop/workspace/\u1107\u116e\u1109\u1173\u1110\u1173\u110f\u1162\u11b7\u1111\u1173/lvl1_pj_merge",
+    "host": "Bokkiui-MacBookAir.local",
+    "username": "bokkimin",
+    "executable": "/usr/local/anaconda3/envs/boostcamp/bin/python",
+    "cpu_count": 2,
+    "cpu_count_logical": 2,
+    "cpu_freq": {
+        "current": 1100,
+        "min": 1100,
+        "max": 1100
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1100,
+            "min": 1100,
+            "max": 1100
+        }
+    ],
+    "disk": {
+        "total": 233.46913528442383,
+        "used": 97.89018630981445
+    },
+    "memory": {
+        "total": 8.0
+    }
+}

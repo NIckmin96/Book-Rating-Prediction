@@ -1,5 +1,8 @@
 # LEVEL1 P Stage - Book Recommendation
 
+## main_streamlit.py
+- __main_streamlit.py는 streamlit에 모델을 적용하기 위한 파일이므로 본 프로젝트와는 큰 연관성이 없습니다.__
+
 &nbsp;
 ### 4️⃣ RecSys_4조 4️⃣
 ![image](readme_img/book_prediction_img.png)

@@ -38,7 +38,7 @@ Category의 경우에는 Language와 달리, 다른 Feature를 직접적으로 �
 3. 각 feature를 input으로, category 값을 output으로 하는 MLP Layer(3 Layers) 구성
 4. Train(약 55% acc) & Inference
 
-[Category Classifier](https://github.com/NIckmin96/Book-Rating-Prediction/blob/main/preprocessing_bk/category_classifier.py)
+[Category Classifier](https://github.com/NIckmin96/Book-Rating-Prediction/blob/main/preprocessing_bk/cat_classifier.py)
 
 # Conclusion
 

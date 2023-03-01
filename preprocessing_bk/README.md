@@ -25,7 +25,7 @@ EDA에서 얻은 인사이트를 바탕으로 결측치 처리를 우선적으�
 2. PCA(95%)를 통해 20의 속성 중 주요 속성을 추출
 3. 추출된 주성분 feature를 활용해 Random Forest Classifier에 학습(약 99%의 정확도) 후 추론
 
-[Language Classifier]
+[Language Classifier](https://github.com/NIckmin96/Book-Rating-Prediction/blob/main/preprocessing_bk/language_classifier.py)
 
 # 2. Category 
 Category의 경우에는 Language와 달리, 다른 Feature를 직접적으로 활용해서 결측치를 채울 수 없음
@@ -37,6 +37,8 @@ Category의 경우에는 Language와 달리, 다른 Feature를 직접적으로 �
 2. Embedding Table을 형성해 벡터화
 3. 각 feature를 input으로, category 값을 output으로 하는 MLP Layer(3 Layers) 구성
 4. Train(약 55% acc) & Inference
+
+[Category Classifier](https://github.com/NIckmin96/Book-Rating-Prediction/blob/main/preprocessing_bk/category_classifier.py)
 
 # Conclusion
 

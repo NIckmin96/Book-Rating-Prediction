@@ -7,7 +7,7 @@ from tqdm import tqdm
 from sklearn.model_selection import train_test_split
 
 '''
-book.csv의 category 결측치를 채우기 위해 category를 제외한 다른 변수들을 lantent vector embedding한 뒤,
+book.csv의 category 결측치를 채우기 위해 category를 제외한 다른 변수들을 latent vector embedding한 뒤,
 MLP layer를 거쳐 category에 대해 예측하는 모델입니다.
 
 run을 하게 되면, 예측된 결측치 값이 nx1 형태의 dataframe으로 저장되고, 그 값은 category feature의 unique한 값이

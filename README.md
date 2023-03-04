@@ -84,44 +84,43 @@
 
   ```
   level1_bookratingprediction_recsys-level1-recsys-04
-  │
-  ├── main.py
+  ├── EDA
+  │   ├── EDA_bk.ipynb
+  │   ├── README.md
+  │   ├── age.png
+  │   ├── bin
+  │   ├── category.png
+  │   ├── include
+  │   ├── lib
+  │   ├── pyvenv.cfg
+  │   └── text_model_EDA.ipynb
+  ├── README.md
+  ├── catboost_info
+  │   ├── catboost_training.json
+  │   ├── learn
+  │   ├── learn_error.tsv
+  │   ├── test
+  │   ├── test_error.tsv
+  │   └── time_left.tsv
+  ├── data
+  │   ├── preprocessed
+  │   └── raw
   ├── ensemble.py
-  │
-  ├── data/
-  │   ├── books2.csv
-  │   ├── books_clustering.csv
-  │   ├── books_for_txtmodel.csv
-  │   ├── books_lang.csv
-  │   ├── books_lang_cat.csv
-  │   ├── books_lang_cat_dg.csv
-  │   ├── books_lang_cat_group.csv
-  │   ├── books_lang_cat_group2.csv
-  │   ├── books_lang_cluster.csv
-  │   ├── cat_predict.csv
-  │   ├── cat_predict_2.csv
-  │   ├── cat_predict_km.csv
-  │   └── users2.csv
-  │
-  ├── src/
-  │   ├── data/
-  │   │   ├── __init__.py
-  │   │   ├── CatBoost_data.py
-  │   │   ├── context_data.py
-  │   │   ├── dl_data.py
-  │   │   ├── donggun_data.py
-  │   │   ├── image_data.py
-  │   │   └── text_data.py
-  │   ├── ensembles/
-  │   │   └── ensembles.py
-  │   └── models/
-  │       ├── _models.py
-  │       ├── CatBoost_model.py
-  │       ├── context_models.py
-  │       ├── dl_models.py
-  │       ├── donggun_model.py
-  │       ├── image_models.py
-  │       └── text_models.py
-  │
-  └── readme_img/
+  ├── main.py
+  ├── main_streamlit.py
+  ├── preprocessing_bk
+  │   ├── README.md
+  │   ├── cat_classifier.py
+  │   ├── cat_cluster.ipynb
+  │   └── language_classifier.py
+  ├── requirements.txt
+  ├── requirements_ssh.txt
+  ├── requirements_ssh_2.txt
+  ├── src
+  │   ├── __init__.py
+  │   ├── data
+  │   ├── ensembles
+  │   ├── models
+  │   └── utils.py
+  └── submit
   ```
